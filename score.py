@@ -8,9 +8,15 @@ Original file is located at
 """
 
 score=input().spliut()
+min=0
+max=0
 
-countF=0
 for s in score:
   if int(s)<60:
     countF += 1
+    if s>max:
+      max=s
+    if s<min:
+      min=s
 print(countF)
+print(min,max)
