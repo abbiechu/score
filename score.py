@@ -7,16 +7,22 @@ Original file is located at
     https://colab.research.google.com/drive/1vZn9OGsZFsLDFMwW5Yc88M64I7S8CnI1
 """
 
+
+
 score=input().split()
+s=0
 min=0
 max=0
+countF = 0
 
-for s in score:
-  if int(s)<60:
-
-    if s>max:
-      max=s
-    if s<min:
-      min=s
-
+for i in score:
+  s+=i
+  if int(i)<60:
+    countF = 0
+  if i>max:
+    max=i
+  if i<min:
+    min=i
 print(min,max)
+print(s/len(score))
+
